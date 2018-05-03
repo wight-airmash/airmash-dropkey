@@ -1,4 +1,4 @@
-const HOTKEY_CODE = 89;
+const HOTKEY = 'y';
 const GAME_TYPE = {
   CTF: 2,
 };
@@ -13,7 +13,7 @@ const isChatOpen = () => {
 
 document.addEventListener('keydown', e => {
   if (
-    e.keyCode === HOTKEY_CODE &&
+    e.key === HOTKEY &&
     isExists(window.game) &&
     window.game.gameType === GAME_TYPE.CTF &&
     isExists(window.Network) &&
